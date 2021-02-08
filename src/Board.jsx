@@ -18,10 +18,12 @@ const Board = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  // Setting the input as search term
   const searchCoin = (e) => {
     setSearch(e.target.value);
   };
 
+  // Filtering method
   const filterCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
